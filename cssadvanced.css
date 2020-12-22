@@ -1,0 +1,357 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: arial,sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+nav{
+    position: relative;
+    height: 900px;
+    background: url(bg.png.png);
+    border-style: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+nav .title{
+    text-align: center;
+    font-size: 200%;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* nav menu */
+
+nav .menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 250px;
+}
+
+nav .menu .item{
+    font-size: 0.8em;
+    margin: 0px 40px;
+    color: #222222;
+    text-shadow: 0px 0px 5px #ffffff;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+nav .menu .item:hover{
+    transform: scale(1.05,1.05);
+    color: black;
+}
+
+/* nav  .mobile-menu */
+nav .mobile-menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;   
+    background-color: rgba(255,255,255,0.9);
+    text-align: center;
+    display: none;
+}
+
+nav .mobile-menu .item{
+    font-size: 0.8em;
+    color: #222222;
+    padding-top: 30px;
+    text-align: center;
+}
+
+nav .mobile-menu .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* nav  .mobile-menu-trigger */
+nav .mobile-menu-trigger{
+    display: none;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+nav .mobile-menu-trigger .lines{
+    width: 40px;
+}
+
+nav .mobile-menu-trigger .lines .line{
+    height: 2px;
+    background-color: #000000;
+    margin: 8px 0;
+}
+
+nav .memo{
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+}
+/* 螢幕尺寸小於800像素,套用以下設定 */
+@media (max-width:800px){
+    nav{
+        height: 600px;
+        background-position: 20% center;
+    }
+    nav.title{
+        padding: 25px 0;
+        text-align: center;
+        margin-bottom: 40px;       
+    }
+    nav .menu{
+        display: none;
+    }
+    nav .mobile-menu-trigger{
+        display: flex;
+    }
+    nav.memo{
+        /* font-size:1.25em; */
+        font-size: 2em;
+        text-align: center;
+        /* line-height: 1.25em; */
+    }  
+}
+
+section.gallery{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+section.gallery .col{
+    width: 450px;
+    margin: 20px;
+    /* background-color: red; */
+}
+
+/* section gallery */
+section.gallery .col .picture{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* section text */
+section.gallery .col .text{
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    color: #000000;
+    border: 4px solid #000000;
+    line-height: 0.9em;
+}
+
+/* section picture */
+section.gallery .col .picture1{
+    background-image: url(https://i.imgur.com/X1LI7Jo.jpg);
+    background-size: cover;
+}
+
+section.gallery .col .picture2{
+    background-image: url(https://i.imgur.com/EMn9Dfk.png);
+    background-size: cover;
+}
+
+/* section block */
+section.gallery .col .block{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.gallery .col .block .words{
+    width: 100%;
+}
+
+section.gallery .col .block .words .title{
+    font-family: "Dancing Script",cursive;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+section.gallery .col .block .words .story{
+    font-size: 1.5em;
+    margin-bottom: 40px;
+
+}
+
+section.gallery .col .block .words .action .btn{
+    font-size: 0.8em;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 20px;    
+    transition: background-color 0.5s;
+    cursor: pointer;
+
+}
+
+section.gallery .col .block .words .action .btn:hover{
+    background-color: rgba(0,0,0,1);
+}
+
+/* 螢幕尺寸小於800像素,套用以下設定 */
+@media (max-width:800px){
+    section.gallery{
+        flex-wrap: wrap;
+        /* width: 80%; */
+        margin: 20px 0px;
+    }
+    section.gallery .col{
+        width: 80%;
+        margin: 20px 0px;
+    }
+    section.gallery .col:last-child{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+section.story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.story .col{
+    display: flex;
+    width: 1200px;
+    border: 1px solid gray;
+    margin-bottom: 50px;
+}
+
+section.story .col img{
+    width: 50%;
+    opacity: 0.5;
+    transform: opacity 0.5s;
+    cursor: pointer;
+}
+
+section.story .col img:hover{
+    opacity: 1;
+}
+
+section.story .col .text{
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 螢幕尺寸小於800像素,套用以下設定 */
+@media (max-width:800px){
+   section.story .col{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 20px 0px;
+    }
+    section.story .col img{
+        width: 100%;
+    }
+    section.story .col .text{
+       font-size: 1.5em;
+       width: 100%;
+        
+    }
+}
+
+section.story .col .text h2{
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+section.story .col .text p{
+    font-size: 16px;
+    padding-bottom: 80px;
+    color: darkgray;
+    border-bottom: 1px solid lightgray;
+}
+
+section.story .col .text .read{
+    display: flex;
+    align-items: center;
+}
+
+section.story .col .text .read .result{
+    padding-top: 30px;    
+    padding-right: 40px;
+    font-size: 12px;
+    color: darkgray;
+}
+
+footer{
+    background-color: #000000;
+}
+
+footer p{
+    padding: 100px;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}
+
